@@ -80,7 +80,7 @@ def update(dt):
         time_since_last_rocket = 0.0
         time_to_next_rocket = random.random()
 
-    for rocket in (r for r in rockets):
+    for rocket in [r for r in rockets]:
         rocket.update(dt)
 
         # check if exploded
@@ -105,7 +105,7 @@ def symbol_to_char(symbol):
 
 @window.event
 def on_key_press(symbol, modifier):
-    for rocket in (r for r in rockets):
+    for rocket in [r for r in rockets]:
         if symbol_to_char(symbol) == rocket.letter:
             rockets.remove(rocket)  
 
