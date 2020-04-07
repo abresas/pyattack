@@ -25,9 +25,9 @@ class Rocket:
 
         self.rocket_sprite = pyglet.sprite.Sprite(img=rocket_image, x=initial_x, y=initial_y)
 
-        letter_offset_x = -7
-        letter_offset_y = -20
-        self.letter_label = pyglet.text.Label(font_size=24, text=letter, color=(0, 0, 0, 255), x=initial_x + letter_offset_x, y=initial_y + letter_offset_y)
+        letter_offset_x = 3
+        letter_offset_y = -12
+        self.letter_label = pyglet.text.Label(font_size=20, text=letter, anchor_x='center', anchor_y='center', color=(0, 0, 0, 255), x=initial_x + letter_offset_x, y=initial_y + letter_offset_y)
 
     def draw(self):
         self.rocket_sprite.draw()
